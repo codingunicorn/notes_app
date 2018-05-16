@@ -5,7 +5,8 @@
  :root {
     --bg-color: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     --third-color: #ddd;
-    --text-color: white;
+    --secondary-color: white;
+    --secondary-text-color: #333;
 } 
 
 html {
@@ -15,9 +16,9 @@ html {
     background: -o-linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     background: -moz-linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    color:      var(--text-color)
+    color:      var(--secondary-color)
 }
-
+  
 *,
 *::before,
 *::after {
@@ -36,10 +37,47 @@ body {
     font-family: 'Coda', cursive;
 }
 
+header,
+main,
+footer {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 5%;
+}
+
+
+
+main {
+    height: 50vh;
+}
+
+
+select {
+    margin: 25px 20px;
+    padding: 10px;
+    background-color: #eee;
+    border: 0px;
+    background-image: linear-gradient(rgba(0,0,0,.1), rgba(255,255,255,.3));
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2) inset;
+  }
+
 
 /*
- * Styles for a specific section
+ * Note Styles
  */
+
+ .single-note {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    box-shadow: 0 20px 20px rgba(0,0,0,.08);
+    padding: 2%;
+    margin: 0% 5% 5% 0%;
+    border-radius: 2px;
+    width: 23%;
+    min-width: 250px;  
+  }
+
 
 
  /*
