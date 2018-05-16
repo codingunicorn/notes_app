@@ -10,6 +10,7 @@
 } 
 
 html {
+    font-family: 'Lato', sans-serif;    
     box-sizing: border-box;
     background: #fe9a8b; /* For browsers that do not support gradients */
     background: var(--bg-color);
@@ -33,9 +34,6 @@ body {
     padding: 0;
 }
 
-body {
-    font-family: 'Coda', cursive;
-}
 
 header,
 main,
