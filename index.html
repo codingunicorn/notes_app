@@ -7,17 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">  
   <meta name="Notes PWA" content="A simple web app for a simple organization">
   <link rel="stylesheet" href="css/app.css">
+  <link id="theme" rel="stylesheet" href="css/colourful-theme.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">  
 </head>
 
 <body>
  <header>
    <h1> My Notes</h1>
-   <select id="styleswitcher" onchange="styleSwitcher()">
-    <option name="colourful" value="colourful">Colourful theme</option>
-    <option name="light" value="light">Light theme</option>
-    <option name="dark" value="dark">Dark theme</option>
-  </select>
+   <div>
+   <select id="styleSwitcher">
+      <option name="colourful" value="colourful">Colourful theme</option>
+      <option name="light" value="light">Light theme</option>
+      <option name="dark" value="dark">Dark theme</option>
+    </select>
+  <button type="button" onclick="setTheme()">Change Theme</button>
+  </div>
  </header>
 
  <main>
@@ -49,7 +53,9 @@
    
  <footer>
     <p>Made with ♥ by Cécile</p>
-   <script src="js/scripts.js"></script>
+   <script src="js/app.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+   <!-- for the dark theme-->
 </footer> 
 
 </body>

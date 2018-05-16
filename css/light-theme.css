@@ -1,0 +1,10 @@
+/* just for trying out purposes:
+light theme */
+:root {
+    --bg-color: rgba(0, 0, 0, .1);
+    --third-color: #ddd;
+    --secondary-color: #1D2129;
+    --secondary-text-color: #333;
+    --card-color: #fff;
+    --font-style:' Lato', sans-serif;    
+} 

@@ -2,21 +2,12 @@
  * General Styles
  */
 
- :root {
-    --bg-color: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    --third-color: #ddd;
-    --secondary-color: white;
-    --secondary-text-color: #333;
-} 
 
 html {
-    font-family: 'Lato', sans-serif;    
+    font-family: var(--font-style);
     box-sizing: border-box;
-    background: #fe9a8b; /* For browsers that do not support gradients */
+    background: var(--bg-color); /* For browsers that do not support gradients */
     background: var(--bg-color);
-    background: -o-linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    background: -moz-linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     color:      var(--secondary-color)
 }
   
@@ -66,7 +57,7 @@ select {
  */
 
  .single-note {
-    background-color: var(--secondary-color);
+    background-color: var(--card-color);
     color: var(--secondary-text-color);
     box-shadow: 0 20px 20px rgba(0,0,0,.08);
     padding: 2%;

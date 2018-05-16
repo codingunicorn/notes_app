@@ -1,0 +1,10 @@
+/* just for trying out purposes:
+dark theme */
+ :root {
+    --bg-color: #1e1e1e;
+    --third-color: #ddd;
+    --secondary-color: #333;
+    --card-color: #333;
+    --secondary-text-color: rgb(184, 182, 182);
+    --font-style: 'Press Start 2P', cursive;
+} 
