@@ -4,15 +4,48 @@
 <head>
   <meta charset="utf-8">
   <title>Notes PWA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
   <meta name="Notes PWA" content="A simple web app for a simple organization">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
- 
+ <header>
+   <h1> My Notes</h1>
+   <select id="styleswitcher" onchange="styleSwitcher()">
+    <option name="colourful" value="colourful">Colourful theme</option>
+    <option name="light" value="light">Light theme</option>
+    <option name="dark" value="dark">Dark theme</option>
+  </select>
+ </header>
+
+ <main>
+  <div class="toggle">
+    <label class="selected">
+      By importance
+      <input name="state" type="radio" value="importance" checked />
+    </label>
+    <label>
+      By due date
+      <input name="state" type="radio" value="duedate" />
+    </label>
+    <label class="warning">
+      By created date
+      <input name="state" type="radio" value="created date" />
+    </label>
+  </div>
+  <input type="checkbox" onchange="checkFinished(this)" checked>Show finished</input>
+
+  <section class="notescontainer">
+      <button type="button" class="">Add new note</button>        
+  </section>
+ </main>
+   
+
 </body>
 
 <footer>
+  <p>Made with ♥ by Cécile</p>
  <script src="js/scripts.js"></script>
 </footer>
 </html>

@@ -2,8 +2,20 @@
  * General Styles
  */
 
+ :root {
+    --bg-color: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    --third-color: #ddd;
+    --text-color: white;
+} 
+
 html {
     box-sizing: border-box;
+    background: #fe9a8b; /* For browsers that do not support gradients */
+    background: var(--bg-color);
+    background: -o-linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    background: -moz-linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    color:      var(--text-color)
 }
 
 *,
@@ -27,4 +39,10 @@ body {
 
 /*
  * Styles for a specific section
+ */
+
+
+ /*
+ * Styles for themes? here are more infos:
+  https://stackoverflow.com/questions/8796107/how-to-make-changeable-themes-using-css-and-javascript
  */
