@@ -2,6 +2,8 @@
 # Notes App
 > This is an experiemental Notes PWA to test out different PWA functionalities.
 
+Demo Page is here: (not included yet)
+
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
