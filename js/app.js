@@ -1,12 +1,23 @@
 "use strict";
 
-// Event Listeners for UI Elements
+
+/* UI Elements */
+
 const addNote = document.getElementsByClassName("add-note")[0];
 const cancelNote = document.getElementById("cancel-note");
 
 
-// change Theme
 
+/* Event Listeners*/
+
+addNote.addEventListener('click', toggleModal());
+cancelNote.addEventListener('click', toggleModal());
+
+
+
+/* change Theme */
+
+//sets chosen theme
 function setTheme() {
     let selectedOption = document.getElementById("styleSwitcher").selectedIndex;
     let CSStheme = document.getElementById("theme");  
@@ -14,17 +25,7 @@ function setTheme() {
     CSStheme.href = `./css/${chosenTheme}-theme.css`;
 }
 
-/* function toggleModal() {
-    let modal = document.getElementsByClassName("modal")[0];
-    modal.classList.toggle("invisible");
-    console.log("I was toggled");
-} */
-
-addNote.addEventListener('click', toggleModal());
-cancelNote.addEventListener('click', toggleModal());
-
-
-
+//toggles Modal visible or invisible
 function toggleModal() {
     let modal = document.getElementsByClassName("modal")[0];
   
