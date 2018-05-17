@@ -52,9 +52,10 @@
   </section>
  </main>
  
-<section class="modal">
+<section class="modal invisible">
   <div class="modal-content">
     <form >
+        <h3>Title:</h3> <!-- maybe just input? -->
         <input name="title" id="title" type="text"> </input>
   
         <p>Description:</p>
@@ -77,8 +78,8 @@
         <input name="enddate" id="enddate" type="date">
   
         <div class="flex">
-          <button onclick="cancelNewNote()" id="btnCancel" type="button" class="btn">Cancel</button>
-          <button href="index.html" type="submit" value="Submit" id="btnSubmit" class="btn gradient-light">Submit</button>
+          <button type="button" id="cancel-note" class="btn">Cancel</button>
+          <button type="submit" value="Submit" class="btn">Submit</button>
         </div>
       </form>
     </div>
@@ -89,7 +90,6 @@
     <p>Made with ♥ by Cécile</p>
    <script src="js/app.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-   <!-- for the dark theme-->
 </footer> 
 
 </body>
