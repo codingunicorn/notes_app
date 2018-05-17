@@ -4,7 +4,7 @@ dark theme */
     --bg-color: #1e1e1e;
     --third-color: #ddd;
     --secondary-color: #333;
-    --card-color: #333;
-    --secondary-text-color: rgb(184, 182, 182);
+    --card-color: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    --secondary-text-color: rgb(230, 227, 227);
     --font-style: 'Press Start 2P', cursive;
 } 

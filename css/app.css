@@ -6,7 +6,6 @@
 html {
     font-family: var(--font-style);
     box-sizing: border-box;
-    background: var(--bg-color); /* For browsers that do not support gradients */
     background: var(--bg-color);
     color:      var(--secondary-color)
 }
@@ -56,8 +55,13 @@ select {
  * Note Styles
  */
 
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
  .single-note {
-    background-color: var(--card-color);
+    background: var(--card-color);
     color: var(--secondary-text-color);
     box-shadow: 0 20px 20px rgba(0,0,0,.08);
     padding: 2%;
@@ -68,8 +72,40 @@ select {
   }
 
 
+/*
+* Modal Style
+*/
 
- /*
- * Styles for themes? here are more infos:
-  https://stackoverflow.com/questions/8796107/how-to-make-changeable-themes-using-css-and-javascript
- */
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+form {
+    color: var(--secondary-text-color)
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80vw;
+    height: 70vh;
+}
+
+
+.invisible {
+    display: none;
+}
+
+

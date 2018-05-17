@@ -43,14 +43,48 @@
   <input type="checkbox" onchange="checkFinished(this)" checked>Show finished</input>
 </section> -->
 
-  <section class="notescontainer">
-      <div class="single-note">
+  <section class="notes">
+      <div class="add-note single-note">
         <p>Add your first Note</p>
         <!-- add an icon like a + -->
-        </div>       
+        </div>  
+       <div class="single-note"></div>      
   </section>
  </main>
-   
+ 
+<section class="modal">
+  <div class="modal-content">
+    <form >
+        <input name="title" id="title" type="text"> </input>
+  
+        <p>Description:</p>
+        <input name="description" id="description" type="text"> </input>
+  
+        <p>Importance</p>
+        <input name="importance" type="range" id="importance" name="points" min="1" max="3">
+  
+        <!--new method for importance -->
+        <div class="importance">
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text"> </label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text"> </label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text"> </label>
+        </div>
+  
+        <p>Erledigt bis:</p>
+        <input name="enddate" id="enddate" type="date">
+  
+        <div class="flex">
+          <button onclick="cancelNewNote()" id="btnCancel" type="button" class="btn">Cancel</button>
+          <button href="index.html" type="submit" value="Submit" id="btnSubmit" class="btn gradient-light">Submit</button>
+        </div>
+      </form>
+    </div>
+</section>
+
+
  <footer>
     <p>Made with ♥ by Cécile</p>
    <script src="js/app.js"></script>
