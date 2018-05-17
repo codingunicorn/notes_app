@@ -21,7 +21,7 @@
       <option name="light" value="light">Light theme</option>
       <option name="dark" value="dark">Dark theme</option>
     </select>
-  <button type="button" onclick="setTheme()">Change Theme</button>
+  <button type="button" class="btn" onclick="setTheme()">Change Theme</button>
   </div>
  </header>
 
@@ -45,11 +45,26 @@
 </section> -->
 
   <section class="notes">
-      <div class="add-note single-note">
-        <p>Add your first Note</p>
+    <div class="add-note single-note">
+      <h3>Add your first Note</h3>
         <!-- add an icon like a + -->
-        </div>  
-       <div class="single-note"></div>      
+    </div>  
+    <div class="single-note">
+        <div class="lined">
+          <label>
+              <input name="checkbox" class="label__checkbox" id="checknote" type="checkbox" onchange="view.finishNote('{{id}}')" {{#if finished}}checked{{/if}} />
+              <span class="label__text">
+                <span class="label__check">
+                  <i class=""> &#10004;</i>
+                </span>
+              </span>
+            </label>
+          <h3>Notes Titel</h3>
+        </div>
+        <p>Start your way to productivity by creating your first note!</p>
+        <hr>
+        <p>25. 6. 2018</p> 
+    </div>   
   </section>
  </main>
  
@@ -69,9 +84,9 @@
         <p>Erledigt bis:</p>
         <input name="enddate" id="enddate" type="date">
   
-        <div class="flex">
+        <div class="flex bar">
           <button type="button" id="cancel-note" class="btn">Cancel</button>
-          <button type="submit" value="Submit" class="btn">Submit</button>
+          <button type="submit" value="Submit" class="btn cta">Save</button>
         </div>
       </form>
     </div>
