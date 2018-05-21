@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/codingunicorn/notes_app/issues"
   },
-  "homepage": "https://github.com/codingunicorn/notes_app#readme"
+  "homepage": "https://github.com/codingunicorn/notes_app#readme",
+  "dependencies": {
+    "require": "^2.4.20"
+  }
 }
