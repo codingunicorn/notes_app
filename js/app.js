@@ -34,3 +34,4 @@ function toggleModal() {
         console.log("I was toggled");
     };
   }
+

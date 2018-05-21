@@ -1,0 +1,22 @@
+{
+  "name": "notes-pwa",
+  "version": "1.0.0",
+  "description": "A notes PWA\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[Cn experiemental Notes PWA",
+  "main": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[D\u001bapp\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingunicorn/notes_app.git"
+  },
+  "keywords": [
+    "pwa"
+  ],
+  "author": "codingunicorn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingunicorn/notes_app/issues"
+  },
+  "homepage": "https://github.com/codingunicorn/notes_app#readme"
+}

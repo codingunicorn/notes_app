@@ -7,7 +7,7 @@ html {
     font-family: var(--font-style);
     box-sizing: border-box;
     background: var(--bg-color);
-    color:      var(--secondary-color)
+    color:      var(--secondary-color);
 }
   
 *,
