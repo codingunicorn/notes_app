@@ -14,7 +14,6 @@ addNote.addEventListener('click', toggleModal());
 cancelNote.addEventListener('click', toggleModal());
 
 
-
 /* change Theme */
 
 //sets chosen theme
@@ -23,6 +22,7 @@ function setTheme() {
     let CSStheme = document.getElementById("theme");  
     let chosenTheme = document.getElementsByTagName("option")[selectedOption].value;
     CSStheme.href = `./css/${chosenTheme}-theme.css`;
+    //save selected theme in browser or on the servers
 }
 
 //toggles Modal visible or invisible
@@ -31,7 +31,7 @@ function toggleModal() {
   
     return function() {
         modal.classList.toggle("invisible");
-        console.log("I was toggled");
     };
   }
+
 
