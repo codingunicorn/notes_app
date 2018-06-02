@@ -1,0 +1,8 @@
+'strict mode'
+
+class NoteController {
+
+
+
+    
+}
