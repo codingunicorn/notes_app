@@ -1,8 +1,8 @@
-'strict mode'
-
 class NoteModel {
+    constructor() {
 
-
-
-
+    }
+   
 }
+
+
