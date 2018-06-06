@@ -22,7 +22,7 @@ class NoteController {
             let chosenTheme = document.getElementsByTagName("option")[selectedOption].value;    
             CSStheme.href = `./css/${chosenTheme}-theme.css`;
             //TODO: save selected theme in browser or on the servers
-            //localStorage.setItem("theme", chosenTheme);
+            localStorage.setItem("theme", chosenTheme);
          }; 
     }  
 
