@@ -11,7 +11,6 @@ var bodyparser = require('body-parser');
 app.use('/static', express.static('public'));
 
 
-
 // Dateisystem
 app.get('/', express.static(__dirname));
 app.get('/js/', express.static(__dirname));
