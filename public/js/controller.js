@@ -13,6 +13,12 @@ class NoteController {
         };
       }  
 
+    getTheme() {
+        let selectedTheme = localStorage.theme;
+        console.log(selectedTheme);
+        let CSStheme = document.getElementById("theme"); 
+        CSStheme.href = `./css/${selectedTheme}-theme.css`;
+    }
 
     setTheme() {
         
@@ -49,7 +55,7 @@ class NoteController {
     getNotes() {
 
          //TODO: get Notes Data
-         let notes = JSON.parse(localStorage.notes);
+         let notes = localStorage.notes;
          console.log(notes);
         
         //TODO: render Notes Data in HTML (2.0 with Handlebars)

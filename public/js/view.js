@@ -34,6 +34,7 @@ class Note {
 class NoteView {
 	init() {
         this.toggleModal();
+        this.getTheme();
         this.setTheme();
         this.saveNewNote();
         this.showNotes();   
@@ -49,7 +50,10 @@ class NoteView {
         addNote.addEventListener('click', notesApp.toggleModal());
         cancleNote.addEventListener('click', notesApp.toggleModal());
         }
-
+    
+    getTheme() {
+        notesApp.getTheme();
+    }    
 
     setTheme() {
         themeSwitcher.addEventListener('click', notesApp.setTheme());
