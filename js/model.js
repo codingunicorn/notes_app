@@ -1,5 +1,7 @@
 class NoteModel {
-    constructor() {
+    constructor(
+        
+    ) {
 
     }
    

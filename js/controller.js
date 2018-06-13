@@ -34,7 +34,6 @@ class NoteController {
             titleField.value, descriptionField.value,
             importanceField.value, duedateField.value
         );
-        console.log(saveThisNote);
         saveThisNote = JSON.stringify(saveThisNote); 
         if(localStorage.notes == undefined) {
             localStorage.setItem("notes", saveThisNote);
@@ -46,6 +45,23 @@ class NoteController {
             }
         };
     }
+
+    getNotes() {
+
+         //TODO: get Notes Data
+         let notes = JSON.parse(localStorage.notes);
+         console.log(notes);
+        
+        //TODO: render Notes Data in HTML (2.0 with Handlebars)
+
+        /* notes.forEach(function(note) {
+            const noteHolder = document.createElement("li");
+            cardDiv.className = `card ${card.name}`;
+            cardDiv.style.backgroundImage = `linear-gradient(grey, grey), url('img/${card.img}')`;
+            grid.insertAdjacentElement('beforeend', cardDiv).innerHTML = `<i class="${card.name}></i>`; 
+        }, this); */
+    }
+
     
     init() {
             this.noteView.init();

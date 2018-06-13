@@ -36,7 +36,12 @@ class NoteView {
         this.toggleModal();
         this.setTheme();
         this.saveNewNote();
-           
+        this.showNotes();   
+    }
+
+    showNotes() {
+       notesApp.getNotes();
+
     }
 
     toggleModal() {
