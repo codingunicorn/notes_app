@@ -1,8 +1,8 @@
 {
   "name": "notes-pwa",
   "version": "1.0.0",
-  "description": "A notes PWA\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[Cn experiemental Notes PWA",
-  "main": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[D\u001bapp\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "description": "A notes PWA. an experiemental Notes PWA",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/codingunicorn/notes_app#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "body-parser": "*",
     "nedb": "^1.8.0",
     "node": "^10.1.0",
     "require": "^2.4.20"
