@@ -1,9 +1,18 @@
-'use strict';
-
 class NoteController {
 	constructor(noteView) {
+
+        fetch(`./api/notes`, {
+        }).then(response => response.json()).then(printNotes);
+
+        
+        function printNotes(data) {
+            console.log(data);
+        }
+
+
 	    this.noteView = noteView;
     }
+
     
     toggleModal() {
         let modal = document.getElementsByClassName("modal")[0];
@@ -49,6 +58,7 @@ class NoteController {
             localStorageData = localStorageData + saveThisNote;
             localStorage.setItem("notes", localStorageData);
             }
+            NotesService.AddNote(note);
         };
     }
 
@@ -56,7 +66,8 @@ class NoteController {
 
          //TODO: get Notes Data
          let notes = localStorage.notes;
-         console.log(notes);
+         console.log(notes, typeof(notes));
+        
         
         //TODO: render Notes Data in HTML (2.0 with Handlebars)
 

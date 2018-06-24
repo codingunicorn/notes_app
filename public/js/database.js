@@ -1,4 +1,20 @@
-const DataStore = require('nedb');
-const db = new DataStore({ filename: './data/notes.db', autoload: true });
+const DataStorage = require('nedb');
+const db = new DataStorage({ filename: './data/notes.db', autoload: true });
 
-console.log("I'm the database");
+
+
+// GET ohne ID
+exports.getAllNotes = (req, res) => {
+    db.find({}, (error, data) => {
+        res.json(data);
+    });
+};
+
+
+// POST ohne ID
+exports.addNewNote = (req, res) => {
+    db.insert(req.body, (error, data) => {
+        res.json(req.body);
+    });
+}
+  
