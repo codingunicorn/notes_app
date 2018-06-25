@@ -1,5 +1,5 @@
-/* 
-class NotesAjaxService {
+
+/* class NotesAjaxService {
 
     static POST(note, callback) {
         //this.call('', 'POST', note, callback);
@@ -30,13 +30,22 @@ class NotesAjaxService {
         xhr.send(json);
     }
 
-}
+} */
 
   
+/* 
+class NoteService {
 
-class NotesService {
+    static getNotes(callback) {
+        fetch(`./api/notes`, {
+        }).then(response => response.json()).then(console.log(data));
 
-    static GetNotes(callback) {
+        //.then(NoteController.getNotes(data));
+        //console.log("I'm in the service" + data);
+        //.then(getNotes); --> return Notes back to the Controller
+    } */
+
+   /*  static GetNotes(callback) {
         NotesAjaxService.GET(null, callback);
     }
 
@@ -56,9 +65,8 @@ class NotesService {
     static DeleteNote(note, callback) {
         NotesAjaxService.DELETE(note, callback);
         console.log("deletenote im service" + note);
-    }
+    } 
 }
+*/
 
 
-
- */

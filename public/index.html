@@ -49,22 +49,24 @@
       <h3>Add your first Note</h3>
         <!-- add an icon like a + -->
     </div>  
+    <script id="note-template" type="text/x-handlebars-template">      
     <div class="single-note">
         <div class="lined">
           <label>
-              <input name="checkbox" class="label__checkbox" id="checknote" type="checkbox" onchange="view.finishNote('{{id}}')" {{#if finished}}checked{{/if}} />
               <span class="label__text">
                 <span class="label__check">
                   <i class=""> &#10004;</i>
                 </span>
               </span>
             </label>
-          <h3>Notes Titel</h3>
+          <h3>{{notetitle}}</h3>
         </div>
-        <p>Start your way to productivity by creating your first note!</p>
+        <p>{{content}}</p>
         <hr>
-        <p>25. 6. 2018</p> 
-    </div>   
+        <p>{{duedate}}</p> 
+    </div> 
+  </script>
+  <div id="single-note"> </div>
   </section>
  </main>
  
@@ -96,9 +98,11 @@
  <footer>
     <p>Made with ♥ by Cécile Hefti</p>
     <script src="js/pwa.js"></script> 
+    <script src="js/note-service.js"></script>
    <script src="js/view.js"></script>
    <script src="js/controller.js"></script>
    <script src="js/model.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </footer> 
 

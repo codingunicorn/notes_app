@@ -4,6 +4,7 @@ var bodyparser = require('body-parser');
 var path = require('path');
 var db = require('./public/js/database.js');
 var app = express();
+var handlebars = require('handlebars');
 
 
 //Bodyparser Middleware
@@ -26,8 +27,6 @@ app.route('/api/notes')
 //.post(db.addNewNote);
 
    
-
-
 
 app.listen(2000, 'localhost', () => {
     console.log('server läuft'); 

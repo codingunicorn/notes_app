@@ -2,15 +2,52 @@ class NoteController {
 	constructor(noteView) {
 
         fetch(`./api/notes`, {
-        }).then(response => response.json()).then(printNotes);
+        }).then(response => response.json()).then(displayData);
 
         
-        function printNotes(data) {
+        function displayData(data) {
+            let notes = data;
+            noteView.showNote(data);
+            }
+        
+
+
+
+        /* NoteService.getNotes((data) => {
+            console.log
+            this.notes = data;
+            this.notes.foreach((e) => {
+                //view.displayNote(e);
+                console.log(e);
+            });
+
+        }); */
+/* 
+        fetch(`./api/notes`, {
+        }).then(response => response.json()).then(getNotes(data));
+
+        function getNotes(data) {
             console.log(data);
-        }
+            let notes = data;
+            console.log(notes[0]);
+
+            let notesContainer = document.getElementsByClassName("single-note");
+            let htmlContent = '';
+            const firstNote = notes[0];
 
 
-	    this.noteView = noteView;
+            if (firstNote) {
+                htmlContent = `<p>${firstNote.notetitle}</p>`;
+                console.log(htmlContent);
+            } else {
+                console.log("no note available");
+            }
+
+            
+        } */
+
+        this.noteView = noteView;
+        
     }
 
     
@@ -64,20 +101,14 @@ class NoteController {
 
     getNotes() {
 
-         //TODO: get Notes Data
-         let notes = localStorage.notes;
-         console.log(notes, typeof(notes));
-        
-        
-        //TODO: render Notes Data in HTML (2.0 with Handlebars)
-
-        /* notes.forEach(function(note) {
+       /*  notes.forEach(function(note) {
             const noteHolder = document.createElement("li");
             cardDiv.className = `card ${card.name}`;
             cardDiv.style.backgroundImage = `linear-gradient(grey, grey), url('img/${card.img}')`;
             grid.insertAdjacentElement('beforeend', cardDiv).innerHTML = `<i class="${card.name}></i>`; 
         }, this); */
     }
+    
 
     
     init() {
