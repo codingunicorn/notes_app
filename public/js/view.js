@@ -16,6 +16,9 @@ const duedateField = document.getElementById("duedate");
 
 let notesContainer = document.getElementsByClassName("notes")[0];
 
+
+
+
 class Note {
     constructor(notetitle, content, importance, duedate) {
         this.notetitle = notetitle;
@@ -40,6 +43,7 @@ class NoteView {
         this.setTheme();
         this.saveNewNote();
         this.showNotes();  
+        this.editNote();
     }
 
     showNotes() {
@@ -77,6 +81,7 @@ class NoteView {
         // Event Listeners
         addNote.addEventListener('click', notesApp.toggleModal());
         cancleNote.addEventListener('click', notesApp.toggleModal());
+
         }
     
     getTheme() {
@@ -95,11 +100,22 @@ class NoteView {
         //send to Controller
         saveNote.addEventListener('click', notesApp.saveNote());
 
-        
     }
 
     editNote() {
         //TODO: update Note
+    notesContainer.addEventListener('click', function whenClicked(evt) {
+        //call edit note when clicked  
+        //TODO: render view
+        console.log(evt.target);
+        //notesApp.toggleModal(evt);
+        //notesApp.toggleModal(evt.target);
+        /* let modal = document.getElementsByClassName("modal")[0];
+    
+        modal.classList.toggle("invisible"); */
+          
+    });
+
     }
 
     finishNote() {

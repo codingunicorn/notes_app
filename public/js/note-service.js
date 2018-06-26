@@ -1,5 +1,5 @@
 
-/* class NotesAjaxService {
+class NotesAjaxService {
 
     static POST(note, callback) {
         //this.call('', 'POST', note, callback);
@@ -30,7 +30,7 @@
         xhr.send(json);
     }
 
-} */
+}
 
   
 
@@ -52,11 +52,13 @@ class NoteService {
     /* static GetOneNote(note, callback) {
         //NotesAjaxService.GET(new NoteModel({_id: id}), callback);
         NotesAjaxService.GET(note, callback);
-    }
+    } */
+
     static AddNote(note, callback) {
         NotesAjaxService.POST(note, callback);
     }
-    static UpdateNote(note, callback) {
+
+    /* static UpdateNote(note, callback) {
         console.log("jetzt simer im service update");
         console.log(note);
         console.log(note.id);

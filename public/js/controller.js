@@ -45,7 +45,7 @@ class NoteController {
 
     saveNote() {
         return function() {
-        console.log("hi");    
+        console.log("hi from savenote");    
         //TODO:  Note im Model ablegen
         /* let note = new Notelike(document.getElementById('title').value,
         document.getElementById('description').value, document.getElementById('importance').value,
@@ -60,6 +60,20 @@ class NoteController {
             duedateField.value
         );
         console.log(saveThisNote);
+
+
+        var url = 'https://example.com/profile';
+        var data = {username: 'example'};
+        
+        fetch(`./api/notes`, {
+          method: 'POST', // or 'PUT'
+          body: JSON.stringify(saveThisNote), // data can be `string` or {object}!
+          headers:{
+            'Content-Type': 'application/json'
+          }
+        }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
 
         //Service.addNote aufrufen und Note übergeben
         //NotesService.AddNote(saveThisNote);
