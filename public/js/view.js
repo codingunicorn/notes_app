@@ -53,8 +53,6 @@ class NoteView {
 
     showNote(notes) {
 
-        console.log(notes[0].notetitle + "  ide view");
-
         //grab Template script
         let templateScript = document.getElementById('note-template').innerHTML;
 

@@ -36,14 +36,10 @@ class NotesAjaxService {
 
 class NoteService {
 
-    /* static getNotes(callback) {
-        fetch(`./api/notes`, {
-        }).then(response => response.json()).then(console.log(data));
-
-        //.then(NoteController.getNotes(data));
-        //console.log("I'm in the service" + data);
-        //.then(getNotes); --> return Notes back to the Controller
-    }  */
+    static getNotes(callback) {
+       
+        //TODO: fetch API here
+    } 
 
    static GetNotes(callback) {
         NotesAjaxService.GET(null, callback);

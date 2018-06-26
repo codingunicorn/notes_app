@@ -10,7 +10,6 @@ class NoteController {
             noteView.showNote(data);
             }
         
-
         this.noteView = noteView;
         
     }
@@ -44,15 +43,9 @@ class NoteController {
     }  
 
     saveNote() {
-        return function() {
-        console.log("hi from savenote");    
+        return function() {        
+        
         //TODO:  Note im Model ablegen
-        /* let note = new Notelike(document.getElementById('title').value,
-        document.getElementById('description').value, document.getElementById('importance').value,
-        document.getElementById('enddate').value);
-        console.log(note); */
-
-
         let saveThisNote = new Note(
             titleField.value, 
             descriptionField.value,
@@ -61,13 +54,10 @@ class NoteController {
         );
         console.log(saveThisNote);
 
-
-        var url = 'https://example.com/profile';
-        var data = {username: 'example'};
-        
+        //push data to DB        
         fetch(`./api/notes`, {
-          method: 'POST', // or 'PUT'
-          body: JSON.stringify(saveThisNote), // data can be `string` or {object}!
+          method: 'POST', // or 'PUT'?
+          body: JSON.stringify(saveThisNote),
           headers:{
             'Content-Type': 'application/json'
           }
@@ -77,31 +67,12 @@ class NoteController {
 
         //Service.addNote aufrufen und Note übergeben
         //NotesService.AddNote(saveThisNote);
-        
-
-
-        /* saveThisNote = JSON.stringify(saveThisNote); 
-        if(localStorage.notes == undefined) {
-            localStorage.setItem("notes", saveThisNote);
-        }
-        else {
-            let localStorageData = localStorage.notes;
-            localStorageData = localStorageData + saveThisNote;
-            localStorage.setItem("notes", localStorageData);
-            }
-            NotesService.AddNote(note); */
-
         };
     }
 
     getNotes() {
 
-       /*  notes.forEach(function(note) {
-            const noteHolder = document.createElement("li");
-            cardDiv.className = `card ${card.name}`;
-            cardDiv.style.backgroundImage = `linear-gradient(grey, grey), url('img/${card.img}')`;
-            grid.insertAdjacentElement('beforeend', cardDiv).innerHTML = `<i class="${card.name}></i>`; 
-        }, this); */
+    
     }
     
 
