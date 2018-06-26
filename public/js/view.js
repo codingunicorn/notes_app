@@ -113,7 +113,6 @@ class NoteView {
         modal.classList.toggle("invisible"); */
           
     });
-
     }
 
     finishNote() {
