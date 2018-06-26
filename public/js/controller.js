@@ -11,41 +11,6 @@ class NoteController {
             }
         
 
-
-
-        /* NoteService.getNotes((data) => {
-            console.log
-            this.notes = data;
-            this.notes.foreach((e) => {
-                //view.displayNote(e);
-                console.log(e);
-            });
-
-        }); */
-/* 
-        fetch(`./api/notes`, {
-        }).then(response => response.json()).then(getNotes(data));
-
-        function getNotes(data) {
-            console.log(data);
-            let notes = data;
-            console.log(notes[0]);
-
-            let notesContainer = document.getElementsByClassName("single-note");
-            let htmlContent = '';
-            const firstNote = notes[0];
-
-
-            if (firstNote) {
-                htmlContent = `<p>${firstNote.notetitle}</p>`;
-                console.log(htmlContent);
-            } else {
-                console.log("no note available");
-            }
-
-            
-        } */
-
         this.noteView = noteView;
         
     }
@@ -82,11 +47,26 @@ class NoteController {
         return function() {
         console.log("hi");    
         //TODO:  Note im Model ablegen
+        /* let note = new Notelike(document.getElementById('title').value,
+        document.getElementById('description').value, document.getElementById('importance').value,
+        document.getElementById('enddate').value);
+        console.log(note); */
+
+
         let saveThisNote = new Note(
-            titleField.value, descriptionField.value,
-            importanceField.value, duedateField.value
+            titleField.value, 
+            descriptionField.value,
+            importanceField.value, 
+            duedateField.value
         );
-        saveThisNote = JSON.stringify(saveThisNote); 
+        console.log(saveThisNote);
+
+        //Service.addNote aufrufen und Note übergeben
+        //NotesService.AddNote(saveThisNote);
+        
+
+
+        /* saveThisNote = JSON.stringify(saveThisNote); 
         if(localStorage.notes == undefined) {
             localStorage.setItem("notes", saveThisNote);
         }
@@ -95,7 +75,8 @@ class NoteController {
             localStorageData = localStorageData + saveThisNote;
             localStorage.setItem("notes", localStorageData);
             }
-            NotesService.AddNote(note);
+            NotesService.AddNote(note); */
+
         };
     }
 

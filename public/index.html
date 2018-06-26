@@ -15,13 +15,29 @@
 <body>
  <header>
    <h1> My Notes</h1>
-   <div>
+   <div class="right">
+      <div class="sorter">
+          <input type="radio" class="hidden" name="sort" id="created" value="created"/>
+          <label class="sortoption" for="created">
+            <p>Created</p>
+            </label>
+          <input type="radio" class="hidden" name="sort" id="importance" value="importance"/>
+          <label class="sortoption" for="importance">
+              <p>Importance</p>
+            </label>
+          <input type="radio" class="hidden" name="sort" id="duedate" value="duedate"/>
+          <label class="sortoption" for="duedate">
+             <p>Duedate</p>
+            </label>
+    </div>
+  <div>
    <select id="themeOptions">
       <option name="colourful" value="colourful">Colourful theme</option>
       <option name="light" value="light">Light theme</option>
       <option name="dark" value="dark">Dark theme</option>
     </select>
   <button type="button" id="switchTheme" class="btn">Change Theme</button>
+  </div>
   </div>
  </header>
 

@@ -33,23 +33,23 @@
 } */
 
   
-/* 
+
 class NoteService {
 
-    static getNotes(callback) {
+    /* static getNotes(callback) {
         fetch(`./api/notes`, {
         }).then(response => response.json()).then(console.log(data));
 
         //.then(NoteController.getNotes(data));
         //console.log("I'm in the service" + data);
         //.then(getNotes); --> return Notes back to the Controller
-    } */
+    }  */
 
-   /*  static GetNotes(callback) {
+   static GetNotes(callback) {
         NotesAjaxService.GET(null, callback);
     }
 
-    static GetOneNote(note, callback) {
+    /* static GetOneNote(note, callback) {
         //NotesAjaxService.GET(new NoteModel({_id: id}), callback);
         NotesAjaxService.GET(note, callback);
     }
@@ -65,8 +65,8 @@ class NoteService {
     static DeleteNote(note, callback) {
         NotesAjaxService.DELETE(note, callback);
         console.log("deletenote im service" + note);
-    } 
+    }  */
 }
-*/
+
 
 
