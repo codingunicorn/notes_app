@@ -251,10 +251,8 @@ Sorting Switcher
 
 input[type=radio] + label {
     display: inline-table;
-    /* color: white; */
     text-align: center;
     width: 30px;
-    /* opacity: 0.3; */
     background-image: linear-gradient(rgba(0,0,0,.2), rgba(255,255,255,.4));
     box-shadow: 1px 1px 3px rgba(0,0,0,.2) inset;
 }
@@ -291,7 +289,7 @@ input[type=checkbox]:checked + label {
     display: flex;
     flex-grow: 1;
     justify-content: space-evenly;   
-    color: darkgray;
+    color: #424242;
     max-width: 50%;
 }
 

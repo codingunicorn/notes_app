@@ -60,18 +60,17 @@ class NoteView {
 
         for (var prop in notes) {
             //console.log("note" + prop + " = " + notes[prop].notetitle);
-
+            
             //pass Data in template
             let compiledHtml = noteTemplate(notes[prop]);
-        
+            let notePlaceholder = document.getElementsByClassName('single-note')[1];
+            
             //add compiled html to the page 
-            let notePlaceholder = document.getElementById('single-note');
             let clonedNote = notePlaceholder.cloneNode(true);
             clonedNote.innerHTML = compiledHtml;
-            
             //add note to the container
             notesContainer.insertAdjacentElement("beforeend", clonedNote);
-          }    
+        }    
     }
 
     toggleModal() {
