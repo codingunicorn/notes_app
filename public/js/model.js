@@ -13,17 +13,19 @@ class NoteModel {
 
 
 class Note {
-    constructor(notetitle, content, importance, duedate) {
+    constructor(notetitle, content, importance, duedate, finished) {
         this.notetitle = notetitle;
         this.content = content;
         this.importance = importance;
         this.duedate = duedate;
+        this.finished = finished;
     }
 
-    set(notetitle, content, importance, duedate) {
+    set(notetitle, content, importance, duedate, finished) {
         this.notetitle = notetitle;
         this.content = content;
         this.importance = importance;
         this.duedate = duedate;
+        this.finished = finished;
     }
 }

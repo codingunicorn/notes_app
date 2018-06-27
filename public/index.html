@@ -53,6 +53,7 @@
     <script id="note-template" type="text/x-handlebars-template">      
         <div class="lined">
           <label>
+              <input name="checkbox" class="label__checkbox" id="checknote" type="checkbox" {{#if finished}}checked{{/if}} />
               <span class="label__text">
                 <span class="label__check">
                   <i class=""> &#10004;</i>
@@ -64,6 +65,7 @@
         <p>{{content}}</p>
         <hr>
         <p>{{duedate}}</p> 
+        <p>{{importance}}</p>
   </script>
   <div class="single-note"></div>
   </section>

@@ -50,8 +50,9 @@ class NoteController {
             titleField.value, 
             descriptionField.value,
             importanceField.value, 
-            duedateField.value
-        );
+            duedateField.value,
+            false
+        );   
         console.log(saveThisNote);
 
         //push data to DB        

@@ -15,7 +15,7 @@ const importanceField = document.getElementById("importance");
 const duedateField = document.getElementById("duedate");
 
 let notesContainer = document.getElementsByClassName("notes")[0];
-
+let markFinished = document.getSelection()
 
 
 
@@ -105,18 +105,27 @@ class NoteView {
     notesContainer.addEventListener('click', function whenClicked(evt) {
         //call edit note when clicked  
         //TODO: render view
-        console.log(evt.target);
-        //notesApp.toggleModal(evt);
-        //notesApp.toggleModal(evt.target);
-        /* let modal = document.getElementsByClassName("modal")[0];
-    
-        modal.classList.toggle("invisible"); */
-          
+        //console.log(evt.target);
+        if(evt.target.id == "checknote") {
+            console.log(evt.target);
+            evt.target.classList.add("finished");
+
+            let saveThisNote = new Note(
+                titleField.value, 
+                descriptionField.value,
+                importanceField.value, 
+                duedateField.value
+            );     
+        }
+        
+
     });
+
     }
 
     finishNote() {
-        //TODO: mark Note as done
+        
+        
     }
 
     deleteNote() {
