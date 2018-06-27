@@ -60,13 +60,15 @@
                 </span>
               </span>
             </label>
-          <h3>{{notetitle}}</h3>
+          <h3 id="title">{{notetitle}}</h3>
         </div>
-        <p>{{content}}</p>
+        <textarea id="content" type="text">{{content}}</textarea>
         <hr>
         <input name="duedate" class="date" id="duedate" type="date" value={{duedate}}>
-        <p>{{importance}}</p>
-  </script>
+        <p id="importance">{{importance}}</p>
+        <button id="delete">Delete</button>
+        <input id="_id" type="hidden" value={{_id}}>
+  </script>    
   </section>
  </main>
  
@@ -77,7 +79,7 @@
         <input name="title" id="title" type="text"> </input>
   
         <p>Description:</p>
-        <input name="description" id="description" type="text"> </input>
+        <input name="description" id="description" type="text"> </textarea>
   
         <p>Importance</p>
         <input name="importance" type="range" id="importance" name="points" min="1" max="3">
@@ -85,7 +87,7 @@
   
         <p>Erledigt bis:</p>
         <input name="duedate" id="duedate" type="date">
-  
+        
         <div class="flex bar">
           <button type="button" id="cancle-note" class="btn">Cancel</button>
           <button id="save-note" value="Submit" class="btn cta">Save</button>
@@ -93,7 +95,6 @@
       </form>
     </div>
 </section>
-
 
  <footer>
     <p>Made with ♥ by Cécile Hefti</p>

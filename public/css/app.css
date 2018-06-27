@@ -236,7 +236,17 @@ form {
     color: var(--secondary-text-color)
 }
 
+
 input[type="text"] {
+    font: var(--font-style);
+    color: var(--secondary-text-color);
+}
+
+.single-note input[type="text"] {
+    border: none;
+}
+
+.modal-content input[type="text"] {
     height: 5vh;
     width: 50vw;
 }
@@ -326,4 +336,3 @@ input[type=checkbox]:checked + label {
     border: none;
 }
 
-.notes

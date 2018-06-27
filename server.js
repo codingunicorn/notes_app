@@ -17,13 +17,13 @@ app.use(express.static(path.join(__dirname, 'public'))); //this makes my server 
 
 
 //REST API
-
 app.route('/api/notes')
 .get((req, res) => {db.getAllNotes(req, res);})
-.post(db.addNewNote);
+.post(db.addNewNote)
+.patch(db.updateNote);
 
-
-
+app.route('/api/notes/:noteID')
+.delete(db.deleteNote);
    
 
 app.listen(2000, 'localhost', () => {

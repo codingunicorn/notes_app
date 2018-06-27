@@ -9,10 +9,14 @@ const themeSwitcher = document.getElementById("switchTheme");
 const themeDropDown = document.getElementById("themeOptions");
 
 let noteContainer = document.getElementsByClassName("single-note");
+
+// Modal fields
 const titleField = document.getElementById("title");
 const descriptionField = document.getElementById("description");
 const importanceField = document.getElementById("importance");
 const duedateField = document.getElementById("duedate");
+const idField = document.getElementById("_id");
+
 
 let notesContainer = document.getElementsByClassName("notes")[0];
 let markFinished = document.getSelection()
@@ -42,14 +46,9 @@ class NoteView {
         this.getTheme();
         this.setTheme();
         this.saveNewNote();
-        this.showNotes();  
         this.editNote();
     }
 
-    showNotes() {
-       notesApp.getNotes();
-
-    }
 
     showNote(notes) {
 
@@ -75,6 +74,7 @@ class NoteView {
             notesContainer.insertAdjacentElement("beforeend", clonedNote);
         }    
     }
+
 
     toggleModal() {
         // Event Listeners
@@ -110,11 +110,15 @@ class NoteView {
         if(evt.target.id == "checknote") {
             console.log(evt.target);
             evt.target.classList.add("finished");
-
-        notesApp.saveNote();
+            notesApp.updateNote();
         }
 
-
+        if(evt.target.id == "delete") {
+            console.log("delete");
+            notesApp.deleteNote();
+        }
+        
+        
     });
 
     }
