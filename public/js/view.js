@@ -59,13 +59,14 @@ class NoteView {
         //compile template
         let noteTemplate = Handlebars.compile(templateScript);
 
+        let notePlaceholder = document.createElement("div");
+        notePlaceholder.className = "single-note";
 
         for (var prop in notes) {
             //console.log("note" + prop + " = " + notes[prop].notetitle);
             
             //pass Data in template
             let compiledHtml = noteTemplate(notes[prop]);
-            let notePlaceholder = document.getElementsByClassName('single-note')[1];
             
             //add compiled html to the page 
             let clonedNote = notePlaceholder.cloneNode(true);
@@ -110,14 +111,9 @@ class NoteView {
             console.log(evt.target);
             evt.target.classList.add("finished");
 
-            let saveThisNote = new Note(
-                titleField.value, 
-                descriptionField.value,
-                importanceField.value, 
-                duedateField.value
-            );     
+        notesApp.saveNote();
         }
-        
+
 
     });
 
